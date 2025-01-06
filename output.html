@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="{{$root.lang}}" manifest="/cache.appcache" ng-app="app" prefix="og: http://ogp.me/ns#">
+ <head bind-notifier="{meta: MetaTags.canonical, hasNext: ($root.hasNextPage || $root.hasPreviousPage)}">
+  <meta content="{{:meta:value}}" ng-repeat="(key, value) in :meta:MetaTags.properties track by key" property="{{:meta:key}}"/>
+  <meta content="535185986670283" property="fb:pages"/>
+  <meta content="{{:meta:MetaTags.title}}" property="og:title"/>
+  <meta content="{{:meta:MetaTags.description}}" property="og:description"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="@endeksa" name="twitter:site"/>
+  <meta content="@endeksa" name="twitter:creator"/>
+  <meta content="{{:meta:MetaTags.title}}" name="twitter:title"/>
+  <meta content="{{:meta:MetaTags.description}}" name="twitter:description"/>
+  <meta content="{{:meta:MetaTags.properties['og:image']}}" name="twitter:image"/>
+  <meta content="{{:meta:MetaTags.description}}" name="description"/>
+  <meta content="{{:meta:MetaTags.robots}}" name="robots"/>
+  <meta content="{{:meta:MetaTags.prerender.statusCode}}" name="prerender-status-code" ng-if=":meta:MetaTags.prerender &amp;&amp; MetaTags.prerender.statusCode"/>
+  <meta content="{{:meta:MetaTags.prerender.header}}" name="prerender-header" ng-if=":meta:MetaTags.prerender &amp;&amp; MetaTags.prerender.header"/>
+  <meta charset="utf-8"/>
+  <base href="/"/>
+  <meta content="!" name="fragment"/>
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport"/>
+  <title ng-bind=":meta:MetaTags.title">
+  </title>
+  <link href="{{:meta:MetaTags.canonical}}" rel="canonical"/>
+  <link href="{{:meta:MetaTags.canonical}}" id="next_Can" ng-if=":hasNext:$root.hasNextPage" rel="next"/>
+  <link href="{{:meta:MetaTags.canonical}}" id="prev_Can" ng-if=":hasNext:$root.hasPreviousPage" rel="prev"/>
+  <link href="{{:meta:MetaTags.canonical_en}}" hreflang="en" id="lang_en" rel="alternate"/>
+  <link href="{{:meta:MetaTags.canonical_tr}}" hreflang="tr" id="lang_tr" rel="alternate"/>
+  <link href="{{:meta:MetaTags.canonical_es}}" hreflang="es-ES" id="lang_es-ES" rel="alternate"/>
+  <link href="{{:meta:MetaTags.canonical_pt}}" hreflang="pt-PT" id="lang_pt-PT" rel="alternate"/>
+  <link href="{{:meta:MetaTags.canonical_en}}" hreflang="x-default" id="lang_x" rel="alternate"/>
+  <link href="/apple-touch-icon.png?v=5" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="/favicon-32x32.png?v=5" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="/favicon-16x16.png?v=5" rel="icon" sizes="16x16" type="image/png"/>
+  <link href="/site.webmanifest?v=5" rel="manifest"/>
+  <link color="#FF004F" href="/safari-pinned-tab.svg?v=5" rel="mask-icon"/>
+  <link href="/favicon.ico?v=5" rel="shortcut icon"/>
+  <meta content="app-id=1272606231" name="apple-itunes-app" ng-if="!ad"/>
+  <meta content="app-id=com.endeksa.app" name="google-play-app" ng-if="!ad"/>
+  <meta content="#FF004F" media="(prefers-color-scheme: light)" name="theme-color"/>
+  <meta content="#FF004F" media="(prefers-color-scheme: dark)" name="theme-color"/>
+  <meta content="Endeksa" name="apple-mobile-web-app-title"/>
+  <meta content="Endeksa" name="application-name"/>
+  <meta content="#FF004F" name="msapplication-TileColor"/>
+  <meta content="#ffffff" name="theme-color"/>
+  <meta content="449e02775ff149b7aa7a6b1463e06ea8" name="p:domain_verify"/>
+  <link href="https://cdn.endeksa.com/" rel="preconnect"/>
+  <link href="https://images.endeksa.com" rel="preconnect"/>
+  <link href="https://apiv3.endeksa.com" rel="preconnect"/>
+  <link href="https://api.endeksa.com" rel="preconnect"/>
+  <link href="https://app.endeksa.com /" rel="preconnect"/>
+  <link crossorigin="anonymous" href="https://use.typekit.net" rel="preconnect"/>
+  <link href="https://mt0.google.com" rel="preconnect"/>
+  <link href="https://mt1.google.com" rel="preconnect"/>
+  <link href="https://mt2.google.com" rel="preconnect"/>
+  <link href="https://mt3.google.com" rel="preconnect"/>
+  <link href="https://metrics.endeksa.com" rel="preconnect"/>
+  <link href="https://analytics.endeksa.com" rel="preconnect"/>
+  <link href="https://cdn.endeksa.com/fonts/fonts-a4704da059.min.css" id="css-fonts" media="print" onload='this.media="all",this.onload=null' rel="stylesheet"/>
+  <link href="https://cdn.endeksa.com/css/vendor-393d82fde6.core.min.css" id="css-vendor" media="print" onload='this.media="all",this.onload=null' rel="stylesheet"/>
+  <link href="https://cdn.endeksa.com/css/main-345bb74b10.core.min.css" id="css-main" media="print" onload='this.media="all",this.onload=null' rel="stylesheet"/>
+  <script defer="" fetchpriority="high" src="https://cdn.endeksa.com/js/vendor-985adfecc4.core.min.js" type="text/javascript">
+  </script>
+  <script defer="" fetchpriority="high" src="https://cdn.endeksa.com/js/main-b80d073fa5.core.min.js" type="text/javascript">
+  </script>
+  <script>
+   window.prerenderReady=!1
+  </script>
+  <style>
+   .cky-btn-revisit-wrapper{width:32px!important;height:32px!important}.cky-revisit-bottom-right{bottom:10px!important;right:40px!important}.cky-btn-revisit-wrapper .cky-btn-revisit img{max-width:inherit!important;width:20px!important;height:20px!important}body.beamerAnnouncementBarTopActive .main-navigation,body.beamerAnnouncementBarTopActive .mobile-comp{top:55px!important;-webkit-transition:.2s ease-in-out;transition:.2s ease-in-out}body.beamerAnnouncementBarTopActive .bar-wrap{top:115px!important}body.beamerAnnouncementBarTopActive .ed-wrap{height:calc(100vh - 162px)}body.beamerAnnouncementBarTopActive .ribbon-a{top:15px}body.beamerAnnouncementBarTopActive .notification-wrapper{top:55px}body.beamerAnnouncementBarTopActive .house-detail-tools{top:136px}.beamer_defaultBeamerSelector{display:none!important}.beamer_noscroll{min-height:100vh}@media all and (max-width:767px){body.beamerAnnouncementBarTopActive .ed-wrap{height:calc(100% - 86px)}}.beamerAnnouncementBarTopActive .beamerAnnouncementBar.beamerAnnouncementBarTop{position:fixed}.beamerAnnouncementBar{background-color:#000!important}.beamerAnnouncementBar .beamerAnnouncementBarContent .beamerAnnouncementBarButton.longText>div{background-color:#000!important}.beamerAnnouncementBarTag{display:none!important}.toast-top-right-endeksa{top:95px;right:12px}#backtop,#loading-bar .bar,.ngdialog{z-index:2147483647}#toast-container{z-index:2147483647!important}@media (max-width:767px){.cky-revisit-bottom-right{bottom:110px!important;right:25px!important}}
+  </style>
+  <style ng-if="$root.hideBar">
+   #tidio-chat-iframe{display:none!important}.cky-btn-revisit-wrapper{display:none!important}
+  </style>
+  <style ng-if="$root.darkMode">
+   *,.progress-count:after{background-color:#000!important;color:#e1e1e1!important;border-color:#292929!important}.cc-ssl,.jp-card,.jp-card-container{display:none!important}.bg-grey-100,.br-wrapper,.main-menu .main-nav-item:not(.nav-item-signin) .menu-item:hover,.main-menu .main-nav-item:not(.nav-item-signin) a.active,.main-menu .main-nav-item:not(.nav-item-signin):hover .menu-item,.opportunities-part,.testimonial-part,a i,a span,button i,button span{background-color:transparent!important}.alert-endeksa-pro-red .btn{color:#fff!important}.btn-primary,.btn-primary i,.btn-primary span,.btn-secondary,.btn-secondary i,.btn-secondary span{color:#000!important}.btn-primary{background:#ff004f!important;background-color:#ff004f!important}.btn-secondary{background:#0bf!important;background-color:#0bf!important}.panel-heading{border:0!important}.agreement,.agreement a,.agreement p,.one-page-payment .panel-title{color:#e1e1e1!important}.lead-content-item label,.step-wizard-list{background-color:#000!important}.analysis-back,.city-silhuate,.endeksa-professionals,.landing-part,.main-menu .main-nav-item:not(.nav-item-signin) .menu-item:hover,.main-menu .main-nav-item:not(.nav-item-signin) a.active,.main-menu .main-nav-item:not(.nav-item-signin):hover .menu-item,.opportunities-part2,.register-panel,.section-valuation,.value-back{background:0 0!important}
+  </style>
+  <style ng-if="$root.refMobile">
+   .desc{padding:15px!important}.panel,.panel-body:not(.panel-adr){padding:0!important}.analysis-back,.endeksa-professionals,.landing-part,.opportunities-part2,.register-panel,.section-valuation,.value-back{background:0 0!important}#backtop,#footer,#tidio-chat,.auto-val-sec,.awesome-iframe .bubbleWithLabel #button,.awesome-iframe .onlyBubble #button,.cky-btn-revisit-wrapper,.desc .type,.endeksa-industry,.hero-background{display:none!important}.payment-wrapper.register-panel{padding-top:30px}.single-declare{padding-top:10px}
+  </style>
+  <style ng-if="$root.isTop">
+   .register-panel,.section-valuation{padding-top:40px!important}.top-static{margin-top:0!important}
+  </style>
+  <body>
+   <version content="15.04.013" name="version">
+   </version>
+   <noscript>
+    <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-TTLPBLN" style="display:none;visibility:hidden" width="0">
+    </iframe>
+    <img alt="Facebook Frame" height="1" src="https://www.facebook.com/tr?id=233175853836342&amp;ev=PageView&amp;noscript=1" style="display:none;visibility:hidden" width="1"/>
+    <div style="text-align:center;background-color:#ff004f;color:#fff;font-size:50px;padding-left:20px;padding-right:20px;height:100vh;margin-top:-64px;padding-top:35vh">
+     <strong>
+      Warning:
+     </strong>
+     JavaScript is disabled in your browser. To view Endeksa, you must enable JavaScript in your browser.
+     <a class="alert-link" href="http://enable-javascript.com/en/" rel="nofollow noopener noreferrer">
+      You can learn how to active it by clicking here.
+     </a>
+    </div>
+   </noscript>
+   <div data-ng-include="'app/shell/ecTopNav.html'" id="top-nav-bar" ng-class="($root.showAdv || $root.showAdvOld) ? 'adv-display' : ''" ng-controller="TopNavController" ng-if="!$root.hideBar &amp;&amp; $root.params.device !== 'mobile' &amp;&amp; !$root.refMobile &amp;&amp; !$root.quake">
+   </div>
+   <div data-ng-include="'app/shell/opt-in.html'" ng-if="$root.showOptIn">
+   </div>
+   <div autoscroll="false" id="root-view" ng-class="{'adv-display': ($root.showAdv || $root.showAdvOld), 'mapBody': mapTarget}" ui-view="">
+   </div>
+   <div class="before-load" show-during-resolve="">
+    <div class="white-overlay">
+    </div>
+    <div class="loader-inner">
+     <div class="loader-line-wrap">
+      <div class="loader-line">
+      </div>
+     </div>
+     <div class="loader-line-wrap">
+      <div class="loader-line">
+      </div>
+     </div>
+     <div class="loader-line-wrap">
+      <div class="loader-line">
+      </div>
+     </div>
+     <span class="loading-endeksa-red">
+     </span>
+    </div>
+   </div>
+   <div class="etbiswrapper" id="ETBIS" ng-if="::false">
+    <div id="80B7AAAF1621446E9104B7A7E5A33B62">
+     <a href="https://etbis.eticaret.gov.tr/sitedogrulama/80B7AAAF1621446E9104B7A7E5A33B62" rel="nofollow" target="_blank">
+      <img loading="lazy" src="" style="width:0;height:0"/>
+     </a>
+    </div>
+   </div>
+   <script async="" delay="https://securepubads.g.doubleclick.net/tag/js/gpt.js" fetchpriority="low" type="text/javascript" unsafe-inline="">
+   </script>
+   <script async="" delay="https://cdn.wootric.com/wootric-sdk.js" fetchpriority="low" type="text/javascript" unsafe-inline="">
+   </script>
+   <script async="" delay="https://app.getbeamer.com/js/beamer-embed.js" fetchpriority="low" ng-if="$root.params.device !== 'mobile' &amp;&amp; !$root.quake" type="text/javascript" unsafe-inline="">
+   </script>
+   <script async="" delay="https://code.tidio.co/j5alrjdajkdksb5lhqle6ssooanm9dgf.js" fetchpriority="low" id="last_script" ng-if="$root.params.device !== 'mobile' &amp;&amp; !$root.quake" type="text/javascript" unsafe-inline="">
+   </script>
+  </body>
+ </head>
+</html>
